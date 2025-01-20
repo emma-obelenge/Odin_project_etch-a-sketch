@@ -34,7 +34,7 @@ function userModifiedLoadGrid(userInput) {
     }
 }
 function loadGrid() {
-    gridDiv.style.width = divPerSide + "rem";
+    gridDiv.style.width = divPerSide + 0.18 + "rem";
     gridDiv.style.height = divPerSide + "rem";
     for(i = 1; i <= totalSquares; i++) {
             const squareDiv = document.createElement("div");
@@ -45,12 +45,21 @@ function loadGrid() {
     container.appendChild(gridDiv);
 }
 
+function getColor() {
+    colorHex = "0123456789ABCDEF";
+    let color = "#";
+    for(let i = 0; i < 6; i++) {
+        color += colorHex[Math.floor(Math.random() * 16)]
+    }
+    return(color);
+}
 
 // event listeners
 container.addEventListener("mouseover", (eventObj) => {
     const target = eventObj.target;
     if(target.classList.contains("squares")) {
-        target.style.backgroundColor = "green";
+        pixelColor = getColor();
+        target.style.backgroundColor = pixelColor;
     }
 });
 
