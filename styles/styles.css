@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+.gridDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.squares {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid blue;
+}
+
+/* .squares:hover {
+    background-color: green;
+} */
