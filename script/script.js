@@ -34,8 +34,8 @@ function userModifiedLoadGrid(userInput) {
     }
 }
 function loadGrid() {
-    gridDiv.style.width = divPerSide + 0.3+ "rem";
-    gridDiv.style.height = divPerSide + 0.3 + "rem";
+    gridDiv.style.width = divPerSide + 0.26+ "rem";
+    gridDiv.style.height = divPerSide + 0.26 + "rem";
     for(i = 1; i <= totalSquares; i++) {
             const squareDiv = document.createElement("div");
             squareDiv.setAttribute("id", "square" + i);
